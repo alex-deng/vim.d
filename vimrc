@@ -8,7 +8,6 @@
 "                                                           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-
 set nocompatible
 set background=dark
 
@@ -17,14 +16,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+
+" Appearance
 Plugin 'bling/vim-airline'
 Plugin 'Yggdroot/indentLine'
-
-" Colorscheme
-Plugin 'sickill/vim-monokai'
-Plugin 'farseer90718/flattr.vim'
-Plugin 'gosukiwi/vim-atom-dark'
-Plugin 'jordwalke/flatlandia'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
@@ -32,19 +27,38 @@ Plugin 'ervandew/supertab'
 Plugin 'majutsushi/tagbar'
 Plugin 'kristijanhusak/vim-multiple-cursors'
 
+" Vimshell
+Plugin 'Shougo/vimproc'
+Plugin 'Shougo/vimshell'
+
+" Colorscheme
+Plugin 'sickill/vim-monokai'
+Plugin 'jordwalke/flatlandia'
+
+" YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+
+" Gtags
+Plugin 'vim-scripts/gtags.vim'
+
+" Snippets
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+" Template
+Plugin 'aperezdc/vim-template'
+
 " Syntax Highlight
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " HTML
 Plugin 'othree/html5.vim'
-Plugin 'slim-template/vim-slim'
 Plugin 'mattn/emmet-vim'
 Plugin 'hail2u/vim-css3-syntax'
 
 " Javascript
 Plugin 'elzr/vim-json'
 Plugin 'pangloss/vim-javascript'
-Plugin 'briancollins/vim-jst'
 Plugin 'kchmck/vim-coffee-script'
 
 " Ruby
@@ -52,9 +66,11 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 
 " Python
-" Plugin 'klen/python-mode'
-Plugin 'yssource/python.vim'
+Plugin 'klen/python-mode'
 Plugin 'davidhalter/jedi-vim'
+
+" Erlang
+Plugin 'jimenezrick/vimerl'
 
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
@@ -86,7 +102,7 @@ if has("gui_running")
     set columns=100
     set lines=28
 
-    set guifont=Source\ Code\ Pro\ for\ Powerline\ Semi-Bold\ 10
+    set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 10
 end
 
 " expand tab to space
@@ -149,25 +165,39 @@ let g:SuperTabMappingForward = '<s-tab>'
 let g:SuperTabMappingBackward = '<tab>'
 let g:SuperTabNoCompleteAfter = ['^', ',', '\s']
 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 
 " emmet-vim
 let g:user_emmet_install_global = 0
 
+" Templates
+let g:templates_no_builtin_templates = 1
+" let g:templates_directory = '~/.vim/templates'
+
 "
 " map
 "
 imap <F2> <ESC><F2>
 map <F2> :NERDTreeToggle<CR>
+map <F3> :TagbarToggle<CR>
 
+" Gtags
+map <M-\.> :GtagsCursor<CR>
+
+" Window navigation
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 map <C-H> <C-W>h<C-W>_
 map <C-L> <C-W>l<C-W>_
 
-autocmd FileType ruby,yml,html,css setlocal shiftwidth=2 softtabstop=2
-autocmd FileType html,css EmmetInstall
+autocmd FileType ruby,eruby,yml,html,css,scss,sass setlocal shiftwidth=2 softtabstop=2
+autocmd FileType html,css,eruby EmmetInstall
 
 "
 " Useful Functions
