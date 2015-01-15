@@ -13,7 +13,7 @@ set background=dark
 
 for ext in ['bundles', 'functions', 'maps']
     if filereadable(expand('~/.vim/vimrc.' . ext))
-        execute 'source vimrc.' . ext
+        execute 'source ' . expand('~/.vim/vimrc.' . ext)
     end
 endfor
 
@@ -21,13 +21,12 @@ endfor
 "
 " Appearence
 "
-
 syntax on
 set number
 set ruler
 set cursorline
 set relativenumber
-set shortmess=atI
+set shortmess=aoOtI
 set laststatus=2
 
 if has("gui_running")
@@ -50,6 +49,9 @@ set shiftwidth=4
 
 set splitright
 set splitbelow
+
+set wildmenu
+set wildmode=list:longest,full
 
 " indent
 set smartindent
@@ -90,7 +92,8 @@ let g:indentLine_color_term = 242
 let g:indentLine_color_gui  = '#60666b'
 let g:indentLine_char       = '┆'       " ¦ ┆ 
 
-let g:SuperTabDefaultCompletionType='context'
+"let g:SuperTabDefaultCompletionType='context'
+let g:SuperTabDefaultCompletionType = '<c-tab>'
 let g:SuperTabMappingForward = '<s-tab>'
 let g:SuperTabMappingBackward = '<tab>'
 let g:SuperTabNoCompleteAfter = ['^', ',', '\s']
@@ -110,6 +113,9 @@ let g:user_emmet_install_global = 0
 let g:templates_no_builtin_templates = 1
 " let g:templates_directory = '~/.vim/templates'
 
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-S-TAB>', '<Up>']
 
 colorscheme flatlandia
 

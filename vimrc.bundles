@@ -19,14 +19,21 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'majutsushi/tagbar'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Quicker finder
 Plugin 'kien/ctrlp.vim'
 
 Plugin 'ervandew/supertab'
 
+Plugin 'scrooloose/syntastic'
+Plugin 'Valloric/YouCompleteMe'
+
 " Gtags
 Plugin 'aceofall/gtags.vim'
+
+" Git
+Plugin 'tpope/vim-fugitive'
 
 " Snippets
 Plugin 'SirVer/ultisnips'
@@ -49,12 +56,12 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 
 " Ruby
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 
 " Python
 " Plugin 'klen/python-mode'
-Plugin 'davidhalter/jedi-vim'
 
 " Erlang
 Plugin 'jimenezrick/vimerl'
