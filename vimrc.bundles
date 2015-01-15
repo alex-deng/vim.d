@@ -1,0 +1,63 @@
+"
+" Bundles
+"
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+" Appearance
+Plugin 'bling/vim-airline'
+Plugin 'Yggdroot/indentLine'
+
+" Colorscheme
+Plugin 'jordwalke/flatlandia'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+
+Plugin 'majutsushi/tagbar'
+
+" Quicker finder
+Plugin 'kien/ctrlp.vim'
+
+Plugin 'ervandew/supertab'
+
+" Gtags
+Plugin 'aceofall/gtags.vim'
+
+" Snippets
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
+" Template
+Plugin 'aperezdc/vim-template'
+
+" Syntax Highlight
+Plugin 'octol/vim-cpp-enhanced-highlight'
+
+" HTML
+Plugin 'othree/html5.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'hail2u/vim-css3-syntax'
+
+" Javascript
+Plugin 'elzr/vim-json'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+
+" Ruby
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+
+" Python
+" Plugin 'klen/python-mode'
+Plugin 'davidhalter/jedi-vim'
+
+" Erlang
+Plugin 'jimenezrick/vimerl'
+
+call vundle#end()
+filetype plugin indent on
