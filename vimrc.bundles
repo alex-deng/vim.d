@@ -10,7 +10,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Appearance
 Plugin 'bling/vim-airline'
-Plugin 'Yggdroot/indentLine'
+"Plugin 'Yggdroot/indentLine'
 
 " Colorscheme
 Plugin 'jordwalke/flatlandia'

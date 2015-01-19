@@ -85,6 +85,8 @@ let NERDTreeQuickOnOpen=1
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
 
+let NERDSpaceDelims = 1
+
 let g:airline_powerline_fonts=1
 let g:airline_theme='powerlineish'
 
