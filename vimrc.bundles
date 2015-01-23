@@ -12,11 +12,15 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 "Plugin 'Yggdroot/indentLine'
 
+Plugin 'junegunn/vim-easy-align'
+
 " Colorscheme
 Plugin 'jordwalke/flatlandia'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+
+Plugin 'osyo-manga/vim-over'
 
 Plugin 'majutsushi/tagbar'
 Plugin 'terryma/vim-multiple-cursors'
@@ -65,6 +69,9 @@ Plugin 'tpope/vim-bundler'
 
 " Erlang
 Plugin 'jimenezrick/vimerl'
+
+" QML
+Plugin 'peterhoeg/vim-qml'
 
 call vundle#end()
 filetype plugin indent on
