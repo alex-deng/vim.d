@@ -4,23 +4,15 @@
 
 filetype off
 
-if has("win32")
-    set rtp+=~/.vim/bundle/Vundle.vim
-    let path='~/.vim/bundle'
-else
-    set rtp+=~/vimfiles/bundle/Vundle.vim
-    let path='~/vimfiles/bundle'
-end
+set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin(path)
+call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
 " Appearance
 Plugin 'bling/vim-airline'
 " Plugin 'Yggdroot/indentLine'
-
-Plugin 'junegunn/vim-easy-align'
 
 " Colorscheme
 Plugin 'jordwalke/flatlandia'
@@ -39,10 +31,13 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'ervandew/supertab'
 
 Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
 
-" Gtags
-Plugin 'aceofall/gtags.vim'
+if !has("win32")
+    Plugin 'Valloric/YouCompleteMe'
+
+    " Gtags
+    Plugin 'aceofall/gtags.vim'
+end
 
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -82,7 +77,7 @@ Plugin 'jimenezrick/vimerl'
 Plugin 'peterhoeg/vim-qml'
 
 " Markdown
-" Plugin 'godlygeek/tabular'
+Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 Plugin 'slim-template/vim-slim'

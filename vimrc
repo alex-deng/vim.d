@@ -63,9 +63,9 @@ set showmatch
 set pastetoggle=<F5>
 
 " encoding
-set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=utf-8
+set encoding=utf-8,gbk
+set fileencoding=utf-8,gbk
+set fileencodings=utf-8,gbk
 
 set iskeyword-=.                       " '.' is an end of word designator
 set iskeyword-=#                       " '#' is an end of word designator
@@ -90,7 +90,7 @@ let g:airline_theme='powerlineish'
 
 let g:indentLine_color_term = 242
 let g:indentLine_color_gui  = '#60666b'
-let g:indentLine_char       = '┆'       " ¦ ┆ 
+let g:indentLine_char       = '┆'       " | ┆
 
 "let g:SuperTabDefaultCompletionType='context'
 let g:SuperTabDefaultCompletionType = '<c-tab>'
@@ -124,7 +124,9 @@ let GtagsCscope_Quiet = 1
 let g:pymode_rope_complete_on_dot = 0
 " let g:pymode_rope_completion = 0
 
-colorscheme flatlandia
+if has("win32") and !has("gui_running")
+    colorscheme flatlandia
+end
 
 " Monkey Patching
 " original 239
@@ -141,7 +143,7 @@ if has("gui_running")
     set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 10
 end
 
-if has("win32")
+if has("win32") and has("gui_running")
     set guifont=Sauce_Code_Powerline:h10:cANSI
 
     source $VIMRUNTIME/delmenu.vim
