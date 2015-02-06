@@ -6,7 +6,7 @@ map <F2> :NERDTreeToggle<CR>
 map <F3> :TagbarToggle<CR>
 
 " Gtags
-map <C-.> :GtagsCursor<CR>
+map <A-.> :GtagsCursor<CR>
 
 " Window navigation
 map <C-J> <C-W>j<C-W>_

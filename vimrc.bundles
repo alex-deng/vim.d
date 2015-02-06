@@ -65,13 +65,21 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-bundler'
 
 " Python
-" Plugin 'klen/python-mode'
+Plugin 'klen/python-mode'
 
 " Erlang
 Plugin 'jimenezrick/vimerl'
 
 " QML
 Plugin 'peterhoeg/vim-qml'
+
+" Markdown
+" Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
+Plugin 'slim-template/vim-slim'
+
+Plugin 'vim-perl/vim-perl'
 
 call vundle#end()
 filetype plugin indent on
