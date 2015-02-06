@@ -17,7 +17,6 @@ for ext in ['bundles', 'functions', 'maps']
     end
 endfor
 
-
 "
 " Appearence
 "
@@ -28,17 +27,6 @@ set cursorline
 set relativenumber
 set shortmess=aoOtI
 set laststatus=2
-
-if has("gui_running")
-    set guioptions-=T
-    set guioptions-=r
-    set guioptions-=L
-
-    set columns=100
-    set lines=28
-
-    set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 10
-end
 
 " expand tab to space
 set expandtab
@@ -141,6 +129,26 @@ colorscheme flatlandia
 " Monkey Patching
 " original 239
 hi LineNr ctermfg=242
+
+if has("gui_running")
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
+
+    set columns=100
+    set lines=28
+
+    set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 10
+end
+
+if has("win32")
+    set guifont=Sauce_Code_Powerline:h10:cANSI
+
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
+
+    language messages zh_CN.utf-8
+end
 
 autocmd FileType ruby,eruby,yml,html,css,scss,sass setlocal shiftwidth=2 softtabstop=2
 autocmd FileType html,css,eruby EmmetInstall
