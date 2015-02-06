@@ -3,14 +3,22 @@
 "
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+
+if has("win32")
+    set rtp+=~/.vim/bundle/Vundle.vim
+    let path='~/.vim/bundle'
+else
+    set rtp+=~/vimfiles/bundle/Vundle.vim
+    let path='~/vimfiles/bundle'
+end
+
+call vundle#begin(path)
 
 Plugin 'gmarik/Vundle.vim'
 
 " Appearance
 Plugin 'bling/vim-airline'
-"Plugin 'Yggdroot/indentLine'
+" Plugin 'Yggdroot/indentLine'
 
 Plugin 'junegunn/vim-easy-align'
 
@@ -82,4 +90,5 @@ Plugin 'slim-template/vim-slim'
 Plugin 'vim-perl/vim-perl'
 
 call vundle#end()
+
 filetype plugin indent on
