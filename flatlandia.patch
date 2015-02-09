@@ -1,0 +1,19 @@
+diff --git a/autoload/airline/themes/flatlandia.vim b/autoload/airline/themes/flatlandia.vim
+index f63ff15..d452af6 100644
+--- a/autoload/airline/themes/flatlandia.vim
++++ b/autoload/airline/themes/flatlandia.vim
+@@ -71,10 +71,10 @@ let g:airline#themes#flatlandia#palette.replace_modified = {
+     \ 'airline_c': [ s:R3[0] , s:I3[1] , s:R3[2] , s:R3[3] , ''     ] }
+ 
+ 
+-let g:airline#themes#flatlandia#palette.insert_paste = {
+-    \ 'airline_a': [ s:I1[0] , s:PA[0] , s:I1[2] , s:PA[1] , ''     ] ,
+-    \ 'airline_b': [ s:PA[0] , s:IM[0] , s:PA[1] , s:IM[1] , ''     ] ,
+-    \ 'airline_c': [ s:PA[0] , s:N3[1] , s:PA[1] , s:N3[3] , ''     ] }
++" let g:airline#themes#flatlandia#palette.insert_paste = {
++    " \ 'airline_a': [ s:I1[0] , s:PA[0] , s:I1[2] , s:PA[1] , ''     ] ,
++    " \ 'airline_b': [ s:PA[0] , s:IM[0] , s:PA[1] , s:IM[1] , ''     ] ,
++    " \ 'airline_c': [ s:PA[0] , s:N3[1] , s:PA[1] , s:N3[3] , ''     ] }
+ 
+ 
+ let g:airline#themes#flatlandia#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)

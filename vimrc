@@ -41,6 +41,9 @@ set splitbelow
 set wildmenu
 set wildmode=list:longest,full
 
+set hidden
+set lazyredraw
+
 " folding
 set foldmethod=syntax
 set foldnestmax=10
@@ -63,8 +66,14 @@ set showmatch
 set pastetoggle=<F5>
 
 " encoding
-set encoding=utf-8,gbk
-set fileencoding=utf-8,gbk
+if has("win32") && !has("gui_running")
+    set encoding=gbk
+    set fileencoding=gbk
+else
+    set encoding=utf-8
+    set fileencoding=utf-8
+endif
+
 set fileencodings=utf-8,gbk
 
 set iskeyword-=.                       " '.' is an end of word designator
@@ -124,13 +133,13 @@ let GtagsCscope_Quiet = 1
 let g:pymode_rope_complete_on_dot = 0
 " let g:pymode_rope_completion = 0
 
-if has("win32") and !has("gui_running")
+if !has("win32") || has("gui_running")
     colorscheme flatlandia
-end
 
-" Monkey Patching
-" original 239
-hi LineNr ctermfg=242
+    " Monkey Patching
+    " original 239
+    hi LineNr ctermfg=242
+end
 
 if has("gui_running")
     set guioptions-=T
@@ -143,7 +152,7 @@ if has("gui_running")
     set guifont=Source\ Code\ Pro\ for\ Powerline\ Medium\ 10
 end
 
-if has("win32") and has("gui_running")
+if has("win32") && has("gui_running")
     set guifont=Sauce_Code_Powerline:h10:cANSI
 
     source $VIMRUNTIME/delmenu.vim
