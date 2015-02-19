@@ -5,6 +5,10 @@ imap <F2> <ESC><F2>
 map <F2> :NERDTreeToggle<CR>
 map <F3> :TagbarToggle<CR>
 
+map <leader>p "+p
+map <leader>y "+y
+map <leader>yy "+yy
+
 " Gtags
 map <A-.> :GtagsCursor<CR>
 

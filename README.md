@@ -1,5 +1,9 @@
 # This is my vim config file
 
+## 效果图
+
+![Linux GUI][1]
+
 ## 插件
 
 - `nerdtree`: 树形目录浏览
@@ -51,6 +55,14 @@ set guifont=Sauce_Code_Powerline:h10:cANSI
 
 Windows 下 Source Code Pro 字体比较虚, 建议配合 MacType 使用.
 
+##### 不使用 MacType
+
+![Gvim on Windows GUI without MacType][2]
+
+##### 使用 MacType
+
+![Gvim on Windows GUI with MacType][3]
+
 ### 主题
 
 ```vim
@@ -99,3 +111,7 @@ git apply ../../flatlandia.patch
 ```bash
 patch -p1 -i ../../flatlandia.patch
 ```
+
+[1]: screenshot/linux_gui.png
+[2]: screenshot/windows_gui_without_mactype.png
+[3]: screenshot/windows_gui_with_mactype.png

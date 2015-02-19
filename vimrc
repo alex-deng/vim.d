@@ -133,6 +133,11 @@ let GtagsCscope_Quiet = 1
 let g:pymode_rope_complete_on_dot = 0
 " let g:pymode_rope_completion = 0
 
+" use append instead of replace
+let g:erlang_skel_replace = 0
+" enable erlang header skel
+let g:erlang_skel_header = {}
+
 if !has("win32") || has("gui_running")
     colorscheme flatlandia
 
