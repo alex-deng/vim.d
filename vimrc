@@ -11,6 +11,8 @@
 set nocompatible
 set background=dark
 
+let mapleader = ','
+
 for ext in ['bundles', 'functions', 'maps']
     if filereadable(expand('~/.vim/vimrc.' . ext))
         execute 'source ' . expand('~/.vim/vimrc.' . ext)
@@ -80,10 +82,8 @@ set iskeyword-=.                       " '.' is an end of word designator
 set iskeyword-=#                       " '#' is an end of word designator
 set iskeyword-=-                       " '-' is an end of word designator
 
-set cscopeprg='gtags-cscope'
 set cscopetag
-
-let mapleader = ','
+set cscopeprg='gtags-cscope'
 
 let g:nerdtree_tabs_open_on_console_startup=1
 let NERDTreeShowHidden=1
@@ -121,6 +121,11 @@ let g:user_emmet_install_global = 0
 " Templates
 let g:templates_no_builtin_templates = 1
 " let g:templates_directory = '~/.vim/templates'
+
+
+let GtagsCscope_Auto_Load = 1
+let CtagsCscope_Auto_Map = 1
+let GtagsCscope_Quiet = 1
 
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_key_list_select_completion = ['<C-TAB>', '<Down>']

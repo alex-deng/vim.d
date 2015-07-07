@@ -9,8 +9,10 @@ map <leader>p "+p
 map <leader>y "+y
 map <leader>yy "+yy
 
-" Gtags
-map <A-.> :GtagsCursor<CR>
+" Tags
+map <leader>, <C-]>
+map <leader>. <C-t>
+" map <leader>. :pop<CR>
 
 " Window navigation
 map <C-J> <C-W>j<C-W>_
