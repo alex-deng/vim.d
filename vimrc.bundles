@@ -47,7 +47,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " Template
-Plugin 'aperezdc/vim-template'
+" Plugin 'aperezdc/vim-template'
 
 " Syntax Highlight
 Plugin 'octol/vim-cpp-enhanced-highlight'
@@ -79,6 +79,8 @@ Plugin 'peterhoeg/vim-qml'
 " Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+
+Plugin 'chase/vim-ansible-yaml'
 
 Plugin 'slim-template/vim-slim'
 
